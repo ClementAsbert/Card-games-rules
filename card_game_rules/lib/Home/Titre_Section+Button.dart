@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SectionTitleAndButton extends StatelessWidget {
+  final String titreSection;
+
+  SectionTitleAndButton({this.titreSection});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,7 +14,7 @@ class SectionTitleAndButton extends StatelessWidget {
         children: [
           Expanded(
             child: Text(
-              'Ajouter récement',
+              this.titreSection,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

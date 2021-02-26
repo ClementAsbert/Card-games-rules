@@ -1,6 +1,7 @@
+import 'package:card_game_rules/Categories.dart';
 import 'package:flutter/material.dart';
 
-import 'HomePage.dart';
+import 'Home/HomePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.orangeAccent[400],
       ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      //home: HomePage(),
+      home: ListCard(),
     );
   }
 }

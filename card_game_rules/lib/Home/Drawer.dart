@@ -25,23 +25,13 @@ class CardDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.filter_1),
-            title: Text("Un joueur"),
+            leading: Icon(Icons.home),
+            title: Text('Acceuil'),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.filter_2),
-            title: Text("Deux joueur"),
-            onTap: () {},
-          ),
-          ListTile(
-            leading: Icon(Icons.filter_3),
-            title: Text("Trois joueur"),
-            onTap: () {},
-          ),
-          ListTile(
-            leading: Icon(Icons.filter_4),
-            title: Text("Quatre joueur"),
+            leading: Icon(Icons.sort),
+            title: Text('Catégories'),
             onTap: () {},
           ),
         ],
