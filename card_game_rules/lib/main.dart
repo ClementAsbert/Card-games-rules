@@ -1,5 +1,8 @@
+import 'package:card_game_rules/All_game.dart';
 import 'package:card_game_rules/Categories.dart';
+import 'package:card_game_rules/models/Card_model.dart';
 import 'package:flutter/material.dart';
+import './data/data.dart' as data;
 
 import 'Home/HomePage.dart';
 
@@ -7,7 +10,13 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  final List<CardModel> cards = data.cards;
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,8 +26,35 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.orangeAccent[400],
       ),
       debugShowCheckedModeBanner: false,
-      //home: HomePage(),
-      home: ListCard(),
+      routes: {
+        '/': (context) {
+          return HomePage();
+        }
+      },
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case ListCategoris.routeName:
+            {
+              return MaterialPageRoute(
+                builder: (context) {
+                  return ListCategoris(
+                    card: widget.cards,
+                  );
+                },
+              );
+            }
+          case AllListCards.routeName:
+            {
+              return MaterialPageRoute(builder: (context) {
+                final CardModel card = settings.arguments;
+                return AllListCards(
+                  cards: widget.cards,
+                  card: card,
+                );
+              });
+            }
+        }
+      },
     );
   }
 }

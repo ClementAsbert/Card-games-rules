@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Categories.dart';
+
 class CardDrawer extends StatelessWidget {
   const CardDrawer();
 
@@ -27,12 +29,16 @@ class CardDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.home),
             title: Text('Acceuil'),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/');
+            },
           ),
           ListTile(
             leading: Icon(Icons.sort),
             title: Text('Catégories'),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, ListCategoris.routeName);
+            },
           ),
         ],
       ),

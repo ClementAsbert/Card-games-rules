@@ -1,23 +1,22 @@
 import 'package:card_game_rules/models/Card_model.dart';
-import 'package:card_game_rules/models/categoris_model.dart';
 
 List<CardModel> cards = [
   CardModel(
     name: 'Bataille',
-    categorie: CategoriesModel(name: '2 joueurs', image: ''),
+    categorie: '2 joueurs',
     id: 'id1',
-    image: '',
+    image: 'assets/images/playing-card-311679_640.png',
   ),
   CardModel(
     name: 'Président',
-    categorie: CategoriesModel(name: '4 joueurs et +', image: ''),
+    categorie: '4 joueurs et +',
     id: 'id2',
-    image: '',
+    image: 'assets/images/playing-card-311679_640.png',
   ),
   CardModel(
     name: 'Solitaire',
-    categorie: CategoriesModel(name: '1 joueurs', image: ''),
+    categorie: '1 joueur',
     id: 'id3',
-    image: '',
+    image: 'assets/images/playing-card-311679_640.png',
   ),
 ];

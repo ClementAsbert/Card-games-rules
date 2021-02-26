@@ -1,22 +1,31 @@
+import 'package:card_game_rules/CategoriesCard.dart';
+import 'package:card_game_rules/Home/Drawer.dart';
+import 'package:card_game_rules/models/Card_model.dart';
 import 'package:flutter/material.dart';
 
-class ListCard extends StatelessWidget {
+class ListCategoris extends StatelessWidget {
+  static const String routeName = '/ListCard';
+  final List<CardModel> card;
+  ListCategoris({this.card});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Catégories'),
       ),
+      drawer: CardDrawer(),
       body: GridView.count(
         crossAxisCount: 2,
-        children: [
-          Card(
-            color: Colors.white,
-          ),
-          Card(
-            color: Colors.white,
-          ),
-        ],
+        crossAxisSpacing: 10,
+        padding: EdgeInsets.all(15),
+        children: card
+            .map(
+              (cards) => CategoriesCard(
+                card: cards,
+              ),
+            )
+            .toList(),
       ),
     );
   }
