@@ -1,9 +1,14 @@
+import 'package:card_game_rules/Category/All_game_per_category.dart';
+import 'package:card_game_rules/Category/Categories.dart';
+import 'package:card_game_rules/models/Card_model.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class SectionTitleAndButton extends StatelessWidget {
+  final CardModel card;
   final String titreSection;
 
-  SectionTitleAndButton({this.titreSection});
+  SectionTitleAndButton({this.titreSection, this.card});
 
   @override
   Widget build(BuildContext context) {

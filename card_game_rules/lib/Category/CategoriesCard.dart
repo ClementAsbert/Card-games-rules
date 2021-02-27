@@ -1,4 +1,4 @@
-import 'package:card_game_rules/All_game.dart';
+import 'package:card_game_rules/Category/All_game_per_category.dart';
 import 'package:card_game_rules/models/Card_model.dart';
 import 'package:flutter/material.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Categories.dart';
+import '../Category/Categories.dart';
 
 class CardDrawer extends StatelessWidget {
   const CardDrawer();

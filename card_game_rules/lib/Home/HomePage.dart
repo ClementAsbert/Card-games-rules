@@ -1,5 +1,5 @@
 import 'package:card_game_rules/Home/Titre_Section+Button.dart';
-import 'package:card_game_rules/Categories.dart';
+import 'package:card_game_rules/Category/Categories.dart';
 import 'package:card_game_rules/models/Card_model.dart';
 import 'package:flutter/material.dart';
 

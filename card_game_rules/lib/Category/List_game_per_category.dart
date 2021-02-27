@@ -1,3 +1,4 @@
+import 'package:card_game_rules/Category/GameView.dart';
 import 'package:card_game_rules/models/Card_model.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,10 @@ class _ListGameState extends State<ListGame> {
       leading: Image.asset(widget.card.image),
       title: Text(widget.card.name),
       trailing: Icon(Icons.arrow_forward_ios),
+      onTap: () {
+        Navigator.pushNamed(context, GameView.routeName,
+            arguments: widget.card);
+      },
     );
   }
 }
