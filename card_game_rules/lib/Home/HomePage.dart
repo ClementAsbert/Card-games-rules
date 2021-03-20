@@ -1,11 +1,11 @@
-import 'package:card_game_rules/Home/Titre_Section+Button.dart';
 import 'package:card_game_rules/Category/Categories.dart';
+import 'package:card_game_rules/Home/ListAllGames.dart';
+import 'package:card_game_rules/Home/ListFavorite.dart';
 import 'package:card_game_rules/models/Card_model.dart';
 import 'package:flutter/material.dart';
 
 import 'Drawer.dart';
-import 'Information_Card.dart';
-import 'List_jeux_home.dart';
+
 import '../data/data.dart' as data;
 
 class HomePage extends StatefulWidget {
@@ -30,39 +30,11 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       drawer: CardDrawer(),
-      body: ListView(
+      body: Column(
         children: [
-          Container(
-            child: Column(
-              children: [
-                InformationCard(),
-                Divider(
-                  indent: 20,
-                  endIndent: 20,
-                ),
-                SectionTitleAndButton(
-                  titreSection: 'Ajouter récement',
-                ),
-                ListJeuxHome(),
-                Divider(
-                  indent: 20,
-                  endIndent: 20,
-                ),
-                SectionTitleAndButton(
-                  titreSection: 'Les plus connues',
-                ),
-                ListJeuxHome(),
-                Divider(
-                  indent: 20,
-                  endIndent: 20,
-                ),
-                SectionTitleAndButton(
-                  titreSection: 'Recomander',
-                ),
-                ListJeuxHome(),
-              ],
-            ),
-          ),
+          ListFavoriteHome(),
+          Divider(),
+          ListAllGamesHome(),
         ],
       ),
     );

@@ -38,6 +38,16 @@ class GameViewBar extends StatelessWidget {
                         Navigator.pop(context);
                       },
                     ),
+                    Expanded(
+                      child: IconButton(
+                        alignment: Alignment.centerRight,
+                        icon: Icon(
+                          Icons.favorite_border,
+                          size: 30,
+                        ),
+                        onPressed: () {},
+                      ),
+                    )
                   ],
                 ),
                 Expanded(
